@@ -11,7 +11,6 @@ jobs:
       - name: Pytest coverage comment multiple-files with test report
         uses: MishaKav/pytest-coverage-comment@main
         with:
-          title: Multiple files with test reports        
           multiple-files: |
             My Title 1, ./data/pytest-coverage_3.txt, ./data/pytest_1.xml
             My Title 2, ./data/pytest-coverage_4.txt, ./data/pytest_2.xml
@@ -19,26 +18,23 @@ jobs:
       - name: Pytest coverage comment multiple-files no test report
         uses: MishaKav/pytest-coverage-comment@main
         with:
-          title: Multiple files with no test reports
           create-new-comment: true
           multiple-files: |
-            My Title 1, ./data/pytest-coverage_3.txt
-            My Title 2, ./data/pytest-coverage_4.txt
+            My Title 1 without report, ./data/pytest-coverage_3.txt
+            My Title 2 without report, ./data/pytest-coverage_4.txt
 
       - name: Pytest coverage comment multiple-files mixed 1
         uses: MishaKav/pytest-coverage-comment@main
         with:
-          title: Multiple files with first has test report
           create-new-comment: true
           multiple-files: |
-            My Title 1, ./data/pytest-coverage_3.txt, ./data/pytest_1.xml
-            My Title 2, ./data/pytest-coverage_4.txt
+            My Title 1 with report , ./data/pytest-coverage_3.txt, ./data/pytest_1.xml
+            My Title 2 without report, ./data/pytest-coverage_4.txt
 
       - name: Pytest coverage comment multiple-files mixed 2
         uses: MishaKav/pytest-coverage-comment@main
         with:
-          title: Multiple files with second has test report
           create-new-comment: true
           multiple-files: |
-            My Title 1, ./data/pytest-coverage_3.txt
-            My Title 2, ./data/pytest-coverage_4.txt, ./data/pytest_2.xml
+            My Title 1 without report, ./data/pytest-coverage_3.txt
+            My Title 2 with report, ./data/pytest-coverage_4.txt, ./data/pytest_2.xml
